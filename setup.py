@@ -8,43 +8,41 @@ allows for construction of XML documents with code which directly reflects the
 structure of the resulting document."""
 
 try:
-	from setuptools import setup, find_packages
+    from setuptools import setup, find_packages
 except ImportError:
-	from ez_setup import use_setuptools
-	use_setuptools()
-	from setuptools import setup, find_packages
+    from ez_setup import use_setuptools
+    use_setuptools()
+    from setuptools import setup, find_packages
 
 classifiers = [
-	'Development Status :: 5 - Production/Stable',
-	'Environment :: Console',
-	'Environment :: Web Environment',
-	'Intended Audience :: Developers',
-	'Operating System :: Microsoft :: Windows',
-	'Operating System :: POSIX',
-	'Operating System :: Unix',
-	'Programming Language :: Python :: 2.5',
-	'Topic :: Documentation',
-	'Topic :: Text Processing :: Markup :: XML',
-	'Topic :: Text Processing :: Markup :: HTML',
+    'Development Status :: 5 - Production/Stable',
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: MIT License',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python :: 2.5',
+    'Programming Language :: Python :: 2.6',
+    'Programming Language :: Python :: 2.7',
+    'Topic :: Text Processing :: Markup :: XML',
+    'Topic :: Text Processing :: Markup :: HTML',
 ]
 
 def main():
-	setup(
-		name                 = 'etreefactory',
-		version              = '1.0',
-		description          = 'A Genshi-inspired framework for easy use of ElementTree',
-		long_description     = __doc__,
-		author               = 'Dave Hughes',
-		author_email         = 'dave@waveform.org.uk',
-		url                  = 'http://www.waveform.org.uk/trac/etreefactory/',
-		packages             = find_packages(exclude=['ez_setup']),
-		install_requires     = [],
-		include_package_data = True,
-		platforms            = 'ALL',
-		zip_safe             = False,
-		entry_points         = entry_points,
-		classifiers          = classifiers
-	)
+    setup(
+        name                 = 'etreefactory',
+        version              = '1.0',
+        description          = 'A Genshi-inspired framework for easy use of ElementTree',
+        long_description     = __doc__,
+        author               = 'Dave Hughes',
+        author_email         = 'dave@waveform.org.uk',
+        url                  = 'https://github.com/waveform80/ElementTreeFactory',
+        keywords             = ['xml', 'etree'],
+        packages             = find_packages(exclude=['ez_setup']),
+        install_requires     = [],
+        include_package_data = True,
+        platforms            = 'ALL',
+        zip_safe             = True,
+        classifiers          = classifiers
+    )
 
 if __name__ == '__main__':
-	main()
+    main()
