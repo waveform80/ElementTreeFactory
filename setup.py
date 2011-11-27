@@ -19,16 +19,15 @@ classifiers = [
     'Intended Audience :: Developers',
     'License :: OSI Approved :: MIT License',
     'Operating System :: OS Independent',
-    'Programming Language :: Python :: 2.5',
-    'Programming Language :: Python :: 2.6',
-    'Programming Language :: Python :: 2.7',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 2',
     'Topic :: Text Processing :: Markup :: XML',
     'Topic :: Text Processing :: Markup :: HTML',
 ]
 
 def main():
     setup(
-        name                 = 'etreefactory',
+        name                 = 'ElementTreeFactory',
         version              = '1.0',
         description          = 'A Genshi-inspired framework for easy use of ElementTree',
         long_description     = __doc__,
