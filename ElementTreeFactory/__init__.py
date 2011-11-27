@@ -1,6 +1,6 @@
 # vim: set et sw=4 ts=4:
 
-import elementtree.ElementTree as et
+import xml.etree.ElementTree as et
 
 __all__ = ['ElementTreeFactory', 'tag']
 
@@ -95,7 +95,7 @@ class ElementTreeFactory(object):
                         last.tail = contents
                     else:
                         last.tail += contents
-        elif iselement(contents):
+        elif et.iselement(contents):
             contents.tail = ''
             node.append(contents)
         else:
@@ -127,7 +127,7 @@ class ElementTreeFactory(object):
             elif not isinstance(value, basestring):
                 value = unicode(value)
             return key, value
-        e = Element(_name, dict(
+        e = et.Element(_name, dict(
             clean_attr(key, value)
             for key, value in attrs.iteritems()
             if value is not None and value is not False
@@ -145,3 +145,4 @@ class ElementTreeFactory(object):
         setattr(self, name, generator)
         return generator
 
+tag = ElementTreeFactory()

@@ -13,7 +13,7 @@ print et.tostring(
     tag.html(
         tag.head(
             tag.link(rel='stylesheet', href='default.css', type_='text/css', media='screen'),
-            tag.title('This is a test document),
+            tag.title('This is a test document'),
         ),
         tag.body(
             tag.h1('Welcome to ElementTreeFactory'),
